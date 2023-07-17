@@ -1,0 +1,35 @@
+.header {
+  margin-block: 0 30px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+}
+
+.header__container {
+  width: 1234px;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+}
+
+.header__logo {
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 40px;
+  text-align: start;
+  color: #000000;
+  width: 200px;
+  padding-block: 15px;
+
+}
+
+.header__name {
+  margin: 0;
+}
+
+.header__filter {
+  margin-inline: 5px auto;
+}
+
+.header__random {
+  margin-inline: 0 15px;
+}

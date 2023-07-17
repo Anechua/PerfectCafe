@@ -1,0 +1,50 @@
+.card {
+  height: 100%;
+  background-color: #fff;
+  box-sizing: border-box;
+  border-radius: 15px;
+  box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.4);
+  width: 280px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card--large {
+  width: 598px;
+}
+
+.card__picture {
+  object-fit: cover;
+}
+
+.card__info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 15px;
+  margin-block: 15px auto;
+}
+
+.card p {
+  margin: 0;
+}
+
+.card__name {
+  width: 100%;
+}
+
+.card__address {
+  max-width: 180px;
+}
+
+.card__distance {
+  color: rgba(190, 138, 255, 1);
+  font-weight: 500;
+  max-width: 55px;
+  align-self: end;
+}
+
+.card__chosen {
+  border: 3px solid rgba(190, 138, 255, 1)
+}
