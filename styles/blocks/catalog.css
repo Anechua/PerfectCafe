@@ -6,8 +6,17 @@
   flex-wrap: wrap;
   align-items: stretch;
   gap: 38px;
+
+  @media (max-width: 320px) {
+    width: 100%;
+    gap: 10px
+  }
 }
 
 .catalog__item {
   min-height: 350px;
+
+  @media (max-width: 320px) {
+    width: 100%;
+  }
 }

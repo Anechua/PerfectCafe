@@ -1,0 +1,49 @@
+.modal__container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(242, 242, 242, 0.8);
+  z-index: 2;
+}
+
+.modal__card {
+  position: relative;
+  margin: auto;
+  height: 50%;
+
+  @media (max-width: 320px) {
+    width: 100%;
+    height: 100%;
+    border-radius: 0px;
+  }
+}
+
+.modal__close-button {
+  position: absolute;
+  top: -22px;
+  right: -22px;
+
+  @media (max-width: 320px) {
+    position: unset;
+    margin-block: 10px;
+  }
+}
+
+.modal__close-icon {
+  @media (max-width: 320px) {
+    display: none;
+  }
+}
+
+.modal__close-text {
+  @media (min-width: 321px) {
+    display: none;
+  }
+}
+
+.modal__container-close {
+  display: none;
+}
