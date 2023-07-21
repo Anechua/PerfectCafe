@@ -7,18 +7,19 @@ on:
 
 jobs:
   deploy:
+    permissions:
+        contents: write
+
     runs-on: ubuntu-latest
 
     steps:
       - name: Check Out
         uses: actions/checkout@v3.5.3
-        with:
-          persist-credentials: false
 
       - name: Setup Node
         uses: actions/setup-node@v3.7.0
         with:
-          node-version: 18
+          node-version: 16
 
       - name: Installing Dependencies
         run: npm ci
@@ -29,6 +30,5 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.4.3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          folder: build
+          folder: ./build
           branch: gh-pages
