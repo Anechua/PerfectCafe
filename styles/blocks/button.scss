@@ -22,9 +22,11 @@
   border-radius: 50%;
 
   @media (max-width: 320px) {
-    width: 100%;
+    width: 276px;
     height: 40px;
-    border-radius: 5px;;
+    border-radius: 5px;
+    background-color: rgba(190, 138, 255, 1);
+    color:#000000;
   }
 }
 

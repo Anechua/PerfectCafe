@@ -15,6 +15,17 @@
   }
 }
 
+.modal .card {
+  @media (max-width: 320px) {
+    width: 320px;
+    background-color: transparent;
+    border: none;
+    border-radius: 0px;
+    box-shadow:none;
+    padding-bottom: 0;
+  }
+}
+
 .card--large {
   outline: 3px solid rgba(190, 138, 255, 1);
 
@@ -24,6 +35,12 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 180px auto 50px;
     gap: 30px;
+  }
+}
+
+.modal .card--large {
+  @media (max-width: 320px) {
+    outline: none;
   }
 }
 

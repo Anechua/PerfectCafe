@@ -7,12 +7,6 @@ const generateLocation = (id) => {
   window.history.pushState(null, '', url.toString());
 };
 
-// const getLocation = () => {
-//   const urlParams = new URLSearchParams(window.location.search);
-//   const myParam = urlParams.get('id');
-//   return myParam
-// };
-
 const generateCardInfo = (template, keys) => {
   const {name, address, landmark, cuisine, distance, time, photo, business_lunch, price} = keys;
   template.querySelector('.card__picture').src = photo;
@@ -83,4 +77,4 @@ const renderCafeCatalog = (cafes) => {
   }));
 };
 
-export {createCard, renderCafeCatalog};
+export {createCard, generateLocation, renderCafeCatalog};

@@ -1,22 +1,25 @@
 import {createCard} from './cafes.js';
-import {getRandomInt, isEscapeKey} from './util.js';
+import {isEscapeKey} from './util.js';
+import {generateLocation} from './cafes.js';
 
-const modalContainer = document.querySelector('.modal');
+const modal = document.querySelector('.modal');
 const modalTemplate = document.querySelector('#modal').content.querySelector('.modal__card');
-const closeModalButton = modalContainer.querySelector('.modal__close-button');
+const closeModalButton = modal.querySelector('.modal__close-button');
 
-// const clear = () => {
-//   modalContainer.querySelector('.modal__card').innerHTML = '';
-// }
+const clearModal = () => {
+  modal.querySelector('.modal__card-container').innerHTML = '';
+}
 
-// const add = (cafe) => {
-//   const modalCard = createCard(modalTemplate, cafe);
-//   modalContainer.querySelector('.modal__card').append(modalCard);
-// }
+const daleteLocation = () => {
+  const url = new URL(window.location);
+  url.searchParams.delete('id');
+  window.history.pushState(null, '', url.toString());
+};
 
 const closeModal = () => {
-  modalContainer.classList.add('modal--close');
-  // clear();
+  modal.classList.add('modal--close');
+  clearModal();
+  daleteLocation();
   document.removeEventListener('keydown', onModalKeyDown);
 };
 
@@ -31,16 +34,28 @@ function onModalKeyDown (evt) {
   }
 };
 
+const addModalListeners = (modal, id) => {
+  closeModalButton.addEventListener('click', onCloseModalButtonClick);
+  document.addEventListener('keydown', onModalKeyDown);
+
+  modal.querySelector('.card__share-button').addEventListener('click', (evt) => {
+    evt.preventDefault();
+    generateLocation(id);
+  });
+};
+
 const renderModal = (cafes, callback) => {
   const cafe = callback(cafes);
   const modalCard = createCard(modalTemplate, cafe);
 
-  modalContainer.querySelector('.modal__card').append(modalCard);
+  modal.querySelector('.modal__card-container').append(modalCard);
 
-  closeModalButton.addEventListener('click', onCloseModalButtonClick);
-  document.addEventListener('keydown', onModalKeyDown);
+  addModalListeners(modalCard, cafe.id);
 
-  modalContainer.classList.remove('modal--close');
+  modal.classList.remove('modal--close');
+
+  return(modalCard);
 };
 
-export {renderModal};
+
+export {renderModal,clearModal, closeModal};
