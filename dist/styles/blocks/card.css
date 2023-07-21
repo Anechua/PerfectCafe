@@ -16,6 +16,8 @@
 }
 
 .card--large {
+  outline: 3px solid rgba(190, 138, 255, 1);
+
   @media (min-width: 321px) {
     width: 598px;
     display: grid;
@@ -31,9 +33,21 @@
   }
 }
 
-.card--large .card__choice-button {
+.card--large .card__share-button {
   @media (min-width: 321px) {
     grid-area: 3 / 2 / 4 / 4;
+  }
+}
+
+.card--large .card__random-button {
+  @media (min-width: 321px) {
+    grid-area: 3 / 1 / 4 / 2;
+  }
+}
+
+.card--large .card__catalog-button {
+  @media (min-width: 321px) {
+    grid-area: 3 / 1 / 4 / 2;
   }
 }
 
@@ -45,6 +59,7 @@
 
 .card--large .card__details  {
   display: block;
+
   @media (min-width: 321px) {
     grid-area: 1 / 2 / 3 / 3;
   }
@@ -92,8 +107,4 @@
 
 .card__details p {
   margin-block: 0 20px;
-}
-
-.card--chosen {
-  border: 3px solid rgba(190, 138, 255, 1)
 }

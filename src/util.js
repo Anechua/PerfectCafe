@@ -12,9 +12,4 @@ const getRandomElement = (array) => array[getRandomInt(0, array.length - 1)];
 
 const isEscapeKey = (evt) => evt.key === 'Escape';
 
-const checkRepeats = (array) => {
-  const arrayNoRepeats = new Set(array);
-  return arrayNoRepeats.size === array.length;
-};
-
-export {getRandomElement, isEscapeKey, checkRepeats};
+export {getRandomElement, isEscapeKey};

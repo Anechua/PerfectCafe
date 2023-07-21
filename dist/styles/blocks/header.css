@@ -44,16 +44,16 @@
 }
 
 .header__random {
-  margin-inline: auto 15px;
+  margin-inline: auto 0;
 
   @media (max-width: 320px) {
     margin-inline: 0;
     width: 100%;
   }
 }
-
+/*
 .header__share {
   @media (max-width: 320px) {
     width: 100%;
   }
-}
+} */

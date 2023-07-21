@@ -1,4 +1,4 @@
-.modal__container {
+.modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -9,7 +9,7 @@
   z-index: 2;
 }
 
-.modal__card {
+.modal__content {
   position: relative;
   margin: auto;
   height: 50%;
@@ -23,8 +23,8 @@
 
 .modal__close-button {
   position: absolute;
-  top: -22px;
-  right: -22px;
+  top: -17px;
+  right: 17px;
 
   @media (max-width: 320px) {
     position: unset;
@@ -44,6 +44,6 @@
   }
 }
 
-.modal__container-close {
+.modal--close {
   display: none;
 }

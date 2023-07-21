@@ -27,3 +27,7 @@
     border-radius: 5px;;
   }
 }
+
+.button--catalog {
+  background-color: rgba(190, 138, 255, 1);
+};
